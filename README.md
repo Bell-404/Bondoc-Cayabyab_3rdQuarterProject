@@ -5,7 +5,7 @@
 - Works for both phone and laptop/computer
 - Has links to access media displayed in the website
 - Each subpage in the website are formatted in a way that relates to its topic. I.e., the “Books” tab’s visual design is that of a library, the “Music” tab is displayed like a vinyl player and records, the “Animated
-- Has an interactive 
+- Has an cozy, interactive minigame where uou polish and keep a library 
 ## Details :
 - The form is in the subpage “Recommendations” which lets users send us any books, media, and music they like and would recommend to us
 ## Definition of Done :
