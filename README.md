@@ -7,6 +7,6 @@
 - Each subpage in the website are formatted in a way that relates to its topic. I.e., the “Books” tab’s visual design is that of a library, the “Music” tab is displayed like a vinyl player and records, the “Animated
 - Has an cozy, interactive minigame where uou polish and keep a library 
 ## Details :
-- The form is in the subpage “Recommendations” which lets users send us any books, media, and music they like and would recommend to us
+- The form is in the subpage “Recommendations” will ask for the user's email and name to be able to send an email to the creators. The user will input recommendations for various kinds of media including its title, a short description, and its type.  The user's information will be saved in their computer.
 ## Definition of Done :
 - The website will be done when there are sparkle animations displayed in the corners of all webpages.
