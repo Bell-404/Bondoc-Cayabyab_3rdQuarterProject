@@ -10,3 +10,4 @@
 - The form is in the subpage “Recommendations” will ask for the user's email and name to be able to send an email to the creators. The user will input recommendations for various kinds of media including its title, a short description, and its type.  The user's information will be saved in their computer.
 ## Definition of Done :
 - The website will be done when there are sparkle animations displayed in the corners of all webpages.
+- Clicking the image sinside the media section causes information to show up.
