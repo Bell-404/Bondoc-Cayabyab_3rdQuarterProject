@@ -1,0 +1,36 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+}
+
+.title {
+    font-size: 24px;
+    color: white;
+    text-align: left;
+    padding-left: 40px;
+    flex-grow: 1;
+}
+
+ul li a {
+    display: block;
+    color: white;
+    padding: 20px 45px;
+    text-decoration: none;
+    font-size: 40 px;
+    align-items: center;
+}
+
+ul li a:hover {
+    background-color: #111;
+}
+
+.weblogo {
+    height: 60px;
+    width: 60px;
+    vertical-align: middle;
+    margin-right: 15px;
+}
