@@ -1,4 +1,4 @@
-ul {
+.header {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@ ul {
     display: flex;
 }
 
-.title {
+.header .title {
     font-size: 24px;
     color: white;
     text-align: left;
@@ -15,7 +15,7 @@ ul {
     flex-grow: 1;
 }
 
-ul li a {
+.header li a {
     display: block;
     color: white;
     padding: 20px 45px;
@@ -24,9 +24,9 @@ ul li a {
     align-items: center;
 }
 
-ul li a:hover {
+.header li a:hover {
     background-color: #111;
-}
+}  
 
 .weblogo {
     height: 60px;

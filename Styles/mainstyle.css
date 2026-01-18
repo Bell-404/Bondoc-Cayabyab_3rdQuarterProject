@@ -1,0 +1,11 @@
+* {
+    background-color: rgb(145, 160, 206);
+    font-family: 'Courier New', Courier, monospace
+}
+
+h1 {
+    font-size: 250%;
+    color: black;
+    text-align: center;
+    margin: 60px;
+}

@@ -1,0 +1,23 @@
+.aboutus {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 150px;
+}
+
+.aboutus li {
+    margin: 30px 80px;
+    text-align: center;
+    font-size: 125%;
+}
+
+.aboutus img {
+    height: 400px;
+    width: 400px;
+    border-radius: 10%;
+    margin-bottom: 20px;
+}

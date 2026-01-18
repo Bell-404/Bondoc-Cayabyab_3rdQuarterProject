@@ -1,0 +1,21 @@
+.links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links li {
+    margin: 50px 75px;
+    text-align: center;
+}
+
+.links li a {
+    text-decoration: none;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+}
