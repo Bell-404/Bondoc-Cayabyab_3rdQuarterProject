@@ -1,4 +1,4 @@
-.animationlist {
+.musiclist {
     list-style-type: none;
     margin-left: 20px;
     padding: 0;
@@ -8,24 +8,24 @@
     align-items: left;
 }
 
-.animationlist li {
+.musiclist li {
     margin: 50px 5px;
     text-align: left;
 }
 
-.animationlist button {
+.musiclist button {
     border: none;
     padding: 0px;
     cursor: pointer;
 }
 
-.animationlist li img {
+.musiclist li img {
     width: 80px;
     height: auto;
 }
 
-.animationlist .television {
-    width: 850px;
+.musiclist .phonograph {
+    width: 825px;
     height: auto;
     align-items: right;
 }

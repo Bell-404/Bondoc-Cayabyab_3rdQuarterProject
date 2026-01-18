@@ -1,0 +1,25 @@
+.bookslist {
+    list-style-type: none;
+    margin-left: 20px;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookslist li {
+    margin: 50px 10px;
+    text-align: center;
+}
+
+.bookslist button {
+    border: none;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.bookslist li img {
+    width: 120px;
+    height: auto;
+}
