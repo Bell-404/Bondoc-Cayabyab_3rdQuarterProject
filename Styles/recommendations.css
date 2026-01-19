@@ -1,9 +1,25 @@
 
 div{
     text-align:left;
-    margin-left:1100px;
+    margin-left:100px;
     padding-top: 50px;
     padding-bottom: 50px;
 }
 
 
+#form{
+     border: 5px solid slateblue;
+     width:1000px;
+     height:1050px;
+}
+
+form{
+    margin-left: 950px;
+    margin-top: 30px;
+    position:static;
+}
+
+h1{
+     position:static;
+     text-align:center;
+}
