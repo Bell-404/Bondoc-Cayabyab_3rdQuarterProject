@@ -29,3 +29,51 @@
     height: auto;
     align-items: right;
 }
+
+/* Popover Styles */
+
+:popover-open {
+    font-size: 16px;
+    line-height: 1.6;
+    width: 45%;
+    height: 70%;
+    margin: auto;
+    padding: 20px 20px 0px 20px;
+    border: 3px solid #3e3e3e;
+}
+
+:popover-open h2 {
+    text-align: left;
+    margin: 10px;
+    font-size: 32px;
+}
+
+
+:popover-open .description {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+:popover-open .description li {
+    text-align: justify;
+    margin: 10px;
+}
+
+:popover-open .description li img {
+    width: 250px;
+    height: auto;
+}
+
+:popover-open div {
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+
