@@ -1,0 +1,8 @@
+:popover-open {
+    background-color: #f0f8ff;
+    border: 2px solid #1e90ff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(30, 144, 255, 0.2);
+    padding: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
