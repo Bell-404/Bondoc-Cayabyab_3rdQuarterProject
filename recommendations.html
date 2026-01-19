@@ -1,4 +1,101 @@
 <!DOCTYPE html>
+<html>
 
-<!-- favicon, title, meta tags -->
+
+
+<head>
+    <title>Bell & Audrey's Library</title>
+    <link rel="icon" type="image/x-icon" href="Assets/filler icon.png">
+    <meta charset="UTF-8">
+    <meta name="author" content="Samantha Isabelle Bondoc">
+    <meta name="author" content="Audrey Felicity S. Cayabyab">
+    <link rel="stylesheet" href="Styles/mainstyle.css">
+    <link rel="stylesheet" href="Styles/header.css">
+    <link rel="stylesheet" href="Styles/medianav.css">
+    <link rel="stylesheet" href="Styles/animations.css">
+    <link rel="stylesheet" href="Styles/ainfo.css">
+    <link rel="stylesheet" href="Styles/recommendations.css">
+ 
+</head>
+
+
+
+    <body>
+   <!-- Header -->
+   <ul class="header">
+    <li><img src="Assets/filler icon.png" alt="Webpage Icon" class="weblogo"></li>
+    <li class="title"><h3>Audrey & Bell's Library  ⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆</h3></li>
+    <li><a href="lounge.html">Lounge</a></li>
+    <li><a href="contactsandaboutus.html">Contacts & About Us</a></li>
+    <li><a href="index.html">Home</a></li>
+</ul>
+<!-- End of Header-->
+
+
+
+
+
+
+
+        <h1> Submit your recommendations here!</h1>
+        
+<form onsubmit = "submitform()"  onreset = "resetform()" style = "border: 5px solid slateblue;">
+
+
+<div>
+    <label for = "name">Name</label>
+    <br>
+    <input id = "name"  type = "text">
+</div>
+
+
+
+<div>
+    <label for = "title">Title</label>
+    <br>
+    <input id = "title" type= "text" >
+</div>
+
+
+
+<div>
+    
+    <label for = "media" id = "type">Media Type</label>
+    <br>
+    <input id = "media" type= "text" >
+</div>
+
+
+<div>
+    <label for = "description" id="text_description">Description</label>
+    <br>
+    <textarea id = "description" rows = '20' cols = '70'> </textarea>
+</div>
+
+<div>       
+    <input type="submit" value = "submit form" onclick="alert('Are you sure you want to submit the form?')">
+    </div>
+    
+    <div>    
+    <input type="reset" value = "reset form" onclick="alert('Are you sure you want to reset the form?')">
+    </div>
+
+</form>
+
+<script>
+    function resetform(){
+        alert("The form has been resetted.");
+    }
+
+    function submitform(){
+        alert("The form has been submitted.");
+    }
+
+    </script>
+
+
+
+
+    </body>
+</html>
 
