@@ -1,11 +1,13 @@
 body {
-    background-color: rgb(145, 160, 206);
+    background-image: url('https://i.pinimg.com/1200x/58/75/3a/58753adfbd5c520afebb756742326217.jpg');
+    background-size: cover;
+    background-attachment: fixed;
     font-family: 'Courier New', Courier, monospace
 }
 
 h1 {
     font-size: 250%;
-    color: black;
+    color: antiquewhite;
     text-align: center;
     margin: 60px;
 }

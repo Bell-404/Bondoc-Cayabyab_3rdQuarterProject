@@ -6,11 +6,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 150px;
+    margin: 50px 150px;
+    color:antiquewhite;
 }
 
 .aboutus li {
-    margin: 30px 80px;
+    margin: 30px 80px 0px;
     text-align: center;
     font-size: 125%;
 }
