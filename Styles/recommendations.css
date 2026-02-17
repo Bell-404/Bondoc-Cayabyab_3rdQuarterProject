@@ -1,25 +1,78 @@
-
-div{
-    text-align:left;
-    margin-left:100px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+* {
+    color: #f0f8ff; 
 }
 
-
-#form{
-     border: 5px solid slateblue;
-     width:1000px;
-     height:1050px;
+form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    background-color: #212738; 
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 50px;
 }
 
-form{
-    margin-left: 950px;
-    margin-top: 30px;
-    position:static;
+label {
+    color: #f0f8ff; 
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-h1{
-     position:static;
-     text-align:center;
+input[type="text"] {
+    color: black;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+select {
+    color: black;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 50%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    color: black;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: maroon; 
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    background-color: #212738;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
 }
