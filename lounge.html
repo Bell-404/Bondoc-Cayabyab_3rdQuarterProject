@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <body>
+       <head>
+        <title>Bell & Audrey's Library</title>
+        <link rel="icon" type="image/x-icon" href="Assets/filler icon.png">
+        <meta charset="UTF-8">
+        <meta name="author" content="Samantha Isabelle Bondoc">
+        <meta name="author" content="Audrey Felicity S. Cayabyab">
+        <link rel="stylesheet" href="Styles/mainstyle.css">
+        <link rel="stylesheet" href="Styles/header.css">
+        <link rel="stylesheet" href="Styles/medianav.css">
+    </head>
+
+
+
+    <div class="header">
+                    <li><img src="Assets/filler icon.png" alt="Webpage Icon" class="weblogo"></li>
+                    <li class="title"><h3>Audrey & Bell's Library  ⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆</h3></li>
+                    <li><a href="lounge.html">Lounge</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recommendations.html">Recommendations</a></li>
+                    <li><a href="contactsandaboutus.html">Contacts & About Us</a></li>
+                    <li><a href="animations.html">Animations</a></li>
+                    <li><a href="books.html">Books</a></li>
+                    <li><a href="music.html">Music</a></li>
+
+                </div>
+
+            <h1 class="Minigameheader">Number Guessing Game</h1>
+                <p class="Minigamedesc">This is a simple minigame where you guess the a number randomly generated. The game will give you hints whether the number is higher or lower. Have fun!</p>
+
+                <div class="Minigame">
+                    <p>The number is from 1 to 100.</p>
+                    <p> Enter your guess : <input type="number" id="userGuess" class="inputbox"> </p>
+                    <button onclick="checkIt()">Check It</button>
+                    <div id="result"></div>
+                    <button onclick="location.reload()">Play Again</button>
+
+                    <!-- Java Script Code -->
+                    <script>
+                        var dNumber = Math.floor(Math.random() * 100) + 1; // generates a number from 1  to 100 when the page loads
+                        function checkIt() {
+                            var userGuess = parseInt(document.getElementById("userGuess").value);
+                            
+                            if (isNaN(userGuess) || userGuess < 1 || userGuess > 100) {
+                                document.getElementById("result").innerHTML = "Please enter a valid number between 1 and 100.";
+                                return;
+                            }
+                            else {
+                                if (userGuess < dNumber) {
+                                    document.getElementById("result").innerHTML = "Higher";
+                                }
+                                else if (userGuess > dNumber) {
+                                    document.getElementById("result").innerHTML = "Lower";
+                                }
+                                else {
+                                    document.getElementById("result").innerHTML = "You are correct!";
+                                }
+                            }
+                        }
+                    </script>
+                <!-- End of Java Script Code -->
+                </div>
+            <!-- End of Minigame -->
+    </body>
+</html>
