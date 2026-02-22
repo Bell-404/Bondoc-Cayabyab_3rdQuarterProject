@@ -9,8 +9,8 @@
 }
 
 .animationlist li {
-    margin: 50px 5px;
-    text-align: left;
+    margin: 5px 5px;
+    text-align: center;
 }
 
 .animationlist button {
@@ -25,9 +25,10 @@
 }
 
 .animationlist .television {
-    width: 850px;
-    height: auto;
+    height: 625px;
+    width: auto;
     align-items: right;
+    margin-left: 50px;
 }
 
 /* Popover Styles */
