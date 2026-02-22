@@ -9,7 +9,7 @@
 }
 
 .musiclist li {
-    margin: 50px 5px;
+    margin: 30px 5px;
     text-align: left;
 }
 
@@ -25,9 +25,10 @@
 }
 
 .musiclist .phonograph {
-    width: 825px;
-    height: auto;
+    width: auto;
+    height: 625px;
     align-items: right;
+    margin-left: 150px;
 }
 
 /* Popover Styles */
