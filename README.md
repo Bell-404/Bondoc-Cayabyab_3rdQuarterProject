@@ -15,7 +15,7 @@
 
 ## FINAL MODIFICATION PROPOSAL
 ### Implementation of CRUD (Update and Delete)
-The user can modify the descriptions they submit in the recommendations form. When the user clicks on the edit button, a text box where the user types in the new description pops up then it is saved. The user can also delete recommendations from the display below the form with a delete button beside the recommendations.
+The user can modify the descriptions they submit in the recommendations form. When the user clicks on the edit button, a text box where the user types in the new description pops up then it is saved with a button below (Update). The user can also delete recommendations from the display below the form with a delete button beside the recommendations (Delete).
 
 ## Link to Wireframe :
 ### https://www.canva.com/design/DAG9_m_BChI/ni0RUJkDPYtbKcfSngWnvg/edit?utm_content=DAG9_m_BChI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
