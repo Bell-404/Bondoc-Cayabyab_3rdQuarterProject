@@ -22,4 +22,5 @@ The user can modify the descriptions they submit in the recommendations form. Wh
 ## Link to Wireframe :
 ### https://www.canva.com/design/DAG9_m_BChI/ni0RUJkDPYtbKcfSngWnvg/edit?utm_content=DAG9_m_BChI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
-#### Submitted by Samantha Isabelle Bondoc & Audrey Felicity Cayabyab in Khub PSHS-MC to Sir Roy Vincent Canseco in partial fulfillment of the requirements of CS 3 of DOST-PSHS-MC
+#### License : GNU GENERAL PUBLIC LICENSE v3
+#### Submitted by Samantha Isabelle Bondoc & Audrey Felicity Cayabyab on April 16, 2026 to Sir Roy Vincent Canseco in partial fulfillment of the requirements of CS 3 of DOST-PSHS-MC
