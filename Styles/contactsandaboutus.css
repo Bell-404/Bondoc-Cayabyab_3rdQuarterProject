@@ -8,6 +8,7 @@
     align-items: center;
     margin: 50px 150px;
     color:antiquewhite;
+    
 }
 
 .aboutus li {
@@ -22,3 +23,8 @@
     border-radius: 10%;
     margin-bottom: 20px;
 }
+
+.aboutus p {
+    font-weight: bolder;
+    opacity: 20;
+  }
