@@ -114,21 +114,21 @@ button.style.color= 'black';
             };  
 
             
-    //         //changes by audrey
-    //    // Save recommendation to local storage
+            //changes by audrey
+       // Save recommendation to local storage
     //    localStorage.setItem('recommendations', JSON.stringify(recommendationData)); //added by audrey - save the current recommendation data to local storage, but it will overwrite the previous data because it's not an array of objects, just a single object
     //         localStorage.getItem('recommendations');
     //         let recommendations = []; //added by audrey -  an array for objects
     //         recommendations.push('recommendations'); //added by audrey - add objects to array
     //         localStorage.setItem('recommendations', JSON.stringify(recommendations)); //added by audrey - save array of objects to local storage
-    //         //after testing the localStorage does get updated, to the current new value but the previous value are not saved, so the only value is the new one
-    //  //changes by audrey
+            //after testing the localStorage does get updated, to the current new value but the previous value are not saved, so the only value is the new one
+     //changes by audrey
 
 
 
 
 
-     //original code before changes by audrey
+//   origial code by bell
      let recommendations = JSON.parse(localStorage.getItem('recommendations')) || [];
             recommendations.push(recommendationData);
             localStorage.setItem('recommendations', JSON.stringify(recommendations));
