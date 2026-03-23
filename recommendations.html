@@ -60,12 +60,24 @@
             <!-- Recommendations List -->
                 <h1>Recommendations List</h1>
                 <ul id="recommendationsList"></ul>
+                <button id='delete_recommendations' onclick = 'deleteRecommendations()'> Delete recommendation </button>
             <!-- End of Recommendations List -->
 
         <!-- End of Main Content -->
     </body>
 
     <script>  
+    //button appearance
+const button = document.getElementById('delete_recommendations');
+button.textContent = "Delete all recommendations";
+button.style.color= 'black';
+
+//sucessfully deletes items from local storage
+        function deleteRecommendations() {
+    localStorage.removeItem('recommendations');
+    
+}
+
      // handle form submission and save data to local storage
         const form = document.querySelector('form');
         const recommendationsList = document.getElementById('recommendationsList');
@@ -75,10 +87,13 @@
             let recommendations = JSON.parse(localStorage.getItem('recommendations')) || [];
             recommendations.forEach(rec => {
                 const listItem = document.createElement('li');
-                listItem.innerHTML = `<strong>${rec.name}</strong> recommends "<strong>${rec.title}</strong>" (${rec.mediaType}): <i>${rec.description}</i> <br><br>`;
+                listItem.innerHTML = `<strong>${rec.name}</strong> recommends "<strong>${rec.title}</strong>" (${rec.mediaType}): <i>${rec.description}</i> <br><br> `;
                 recommendationsList.appendChild(listItem);
             });
         }
+
+
+             
 
         // Load recommendations when the page loads
         loadRecommendations();
@@ -96,21 +111,35 @@
                 title,
                 mediaType,
                 description
-            };
+            };  
 
-            // Save recommendation to local storage
-            let recommendations = JSON.parse(localStorage.getItem('recommendations')) || [];
-            recommendations.push(recommendationData);
-            localStorage.setItem('recommendations', JSON.stringify(recommendations));
+            
+        //changes by audrey
+       // Save recommendation to local storage
+            let array_of_objects_test = []; //added by audrey -  an array for objects
+            array_of_objects_test.push(recommendationData); //added by audrey - add objects to array
+            localStorage.setItem('recommendations', JSON.stringify(array_of_objects_test)); //added by audrey - save array of objects to local storage
+            //after testing the localStorage does get updated, to the current new value but the previous value are not saved, so the only value is the new one
+     //changes by audrey
+
+     //original code before changes by audrey
+    //  let recommendations = JSON.parse(localStorage.getItem('recommendations')) || [];
+    //         recommendations.push(recommendationData);
+    //         localStorage.setItem('recommendations', JSON.stringify(recommendations));
 
             // Add recommendation to the list
             const listItem = document.createElement('li');
             listItem.textContent = `${name} recommends "${title}" (${mediaType}): ${description}`;
+            
+
+            
             recommendationsList.appendChild(listItem);
 
             // Clear the form
             form.reset();
         })
+
+ 
     </script>
 </html>
 
