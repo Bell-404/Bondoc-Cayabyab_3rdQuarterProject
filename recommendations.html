@@ -120,7 +120,7 @@ button.style.color= 'black';
 
        let recommendations = []; //added by audrey -  an array for objects
        localStorage.setItem('recommendations', JSON.stringify(recommendations)); //added by audrey - save the current recommendation data to local storage, but it will overwrite the previous data because it's not an array of objects, just a single object
-       JSON.parse(localStorage.getItem('recommendations'));
+       recommendations = JSON.parse(localStorage.getItem('recommendations'));
        recommendations.push(recommendationData);
       localStorage.setItem('recommendations', JSON.stringify(recommendations)); //added by audrey - save array of objects to local storage
             
