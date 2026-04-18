@@ -35,7 +35,7 @@
         <!-- Main Content -->
             <h1>Submit your recommendations here!</h1>
             <!-- Form -->
-                <form>
+                <form id="recommendationForm">
                         <label for="name">Your Name:</label><br>
                         <input type="text" id="name" name="name" required><br><br>
 
@@ -46,15 +46,16 @@
                             <select id="mediaType" name="mediaType" required>
                                 <option value="">Select Media Type</option>
                                 <option value="book">Book</option>
-                                <option value="movie">Movie</option>
-                                <option value="tvshow">TV Show</option>
+                                <option value="animation">Animation</option>
                                 <option value="music">Music</option>
                             </select><br><br>
 
                         <label for="description">Description:</label><br>
                         <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
 
-                        <input type="submit" value="Submit My Recommendation!">
+                        <input type="hidden" id="editId" name="editId">
+                        <input type="submit" id="submitBtn" value="Submit My Recommendation!">
+                        <button type="button" id="cancelBtn" style="display:none;">Cancel Edit</button>
                 </form>
             <!-- End of Form -->
 
@@ -67,83 +68,111 @@
         <!-- End of Main Content -->
     </body>
 
-    <script>  
-        // helpers for localstorage
+    <script>
         const KEY = 'recommendations';
 
+        // Function to load recommendations from localStorage
         function loadRecommendations() {
-            const raw = localStorage.getItem(KEY);
-            return raw ? JSON.parse(raw) : [];
+            const data = localStorage.getItem(KEY);
+            return data ? JSON.parse(data) : [];
         }
 
+        // Function to save recommendations to localStorage
         function saveRecommendations(recommendations) {
             localStorage.setItem(KEY, JSON.stringify(recommendations));
         }
 
-        // rendering list to page
+        // Function to render recommendations on the page
         function renderRecommendations() {
             const recommendations = loadRecommendations();
             const list = document.getElementById('recommendationsList');
-            if (recommendations.length === 0) {
-                list.innerHTML = '<li>No recommendations yet</li>';
-                return;
-            }
-            list.innerHTML = notes.map((n,i) => //use index for delete and edit reference
-                `<li>
-                    ${n.name} recommends ${n.title} (${n.mediaType}): ${n.description}
-                    <button onclick="EditRecommendation(${i})">Edit</button>
-                    <button onclick="DeleteRecommendation(${i})">Delete</button>
-                </li>`
-            ).join('');
+            list.innerHTML = '';
+            recommendations.forEach(function(note) {
+                const li = document.createElement('li');
+                li.innerHTML = `<strong>${note.name}</strong> - ${note.title} (${note.mediaType})<br>${note.description}
+                <button onclick="deleteRecommendation('${note.title}')">Delete</button>
+                <button onclick="editRecommendation('${note.title}')">Edit</button>`;
+                list.appendChild(li);
+            });
         }
 
-        // form handling
-        const form = document.getElementById("recommendationForm");
-        form.onsubmit = e => {
-            e.preventDefault(); //prevent page refresh on form submit
-            const name = document.getElementById("name").value.trim();
-            const note = document.getElementById("description").value.trim();
-            const title = document.getElementById("title").value.trim();
-            const mediaType = document.getElementById("mediaType").value;
-            if (!name || !note || !title || !mediaType) {
-                alert("Please fill in all fields.");
-                return;
-            }
-            const object = { name, title, mediaType, description: note }; //create recommendation object
-            const recommendations = loadRecommendations();
-            recommendations.push(object); //add new recommendation to list
-            saveRecommendations(recommendations); //save updated list to localStorage
-            form.reset(); //clear form
-            renderRecommendations(); //re-render list to page
-        }
-        
-        //delete item from localStorage by index
-        function deletRecommendation(i) {
-            const recommendations = loadRecommendations();
-            recommendations.splice(i, 1); //remove item at index i
-            saveRecommendations(recommendations); //save updated list to localStorage
-            renderRecommendations(); //re-render list to page
+        // Get form elements
+        const form = document.getElementById('recommendationForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const cancelBtn = document.getElementById('cancelBtn');
+        const editId = document.getElementById('editId');
+
+        // Function to reset form to add mode
+        function resetFormMode() {
+            editId.value = '';
+            submitBtn.value = 'Submit My Recommendation!';
+            cancelBtn.style.display = 'none';
+            form.reset();
         }
 
-        //edit item from localStorage by index
-        function editRecommendations(i) {
-            const recommendation = loadRecommendations();
-            const newName = prompt("Edit name:", recommendation[i].name);
-            const newTitle = prompt("Edit title:", recommendation[i].title);
-            const newMediaType = prompt("Edit media type:", recommendation[i].mediaType);
-            const newDescription = prompt("Edit description:", recommendation[i].description);
-            if (newName && newTitle && newMediaType && newDescription) {
-                recommendation[i] = { name: newName, title: newTitle, mediaType: newMediaType, description: newDescription }; //update recommendation object
-                saveRecommendations(recommendation); //save updated list to localStorage
-                renderRecommendations(); //re-render list to page
+        // Handle form submission
+        form.onsubmit = function(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+            const name = document.getElementById('name').value.trim();
+            const title = document.getElementById('title').value.trim();
+            const mediaType = document.getElementById('mediaType').value;
+            const description = document.getElementById('description').value.trim();
+            if (!name || !title || !mediaType || !description) {
+                alert('Please fill in all fields before submitting.');
+                return;
+            }
+            const recommendations = loadRecommendations();
+            if (editId.value) {
+                // Edit existing
+                const rec = recommendations.find(r => r.title === editId.value);
+                if (rec) {
+                    rec.name = name;
+                    rec.title = title;
+                    rec.mediaType = mediaType;
+                    rec.description = description;
+                }
             } else {
-                alert("All fields must be filled out to edit the recommendation.");
+                // Add new
+                const note = {
+                    name: name,
+                    title: title,
+                    mediaType: mediaType,
+                    description: description
+                };
+                recommendations.push(note);
             }
+            saveRecommendations(recommendations);
+            resetFormMode();
+            renderRecommendations();
         }
 
-        //initial render of recommendations list on page load
+        // Function to delete a recommendation
+        function deleteRecommendation(title) {
+            let recommendations = loadRecommendations();
+            recommendations = recommendations.filter(note => note.title !== title);
+            saveRecommendations(recommendations);
+            renderRecommendations();
+        }
+
+        // Function to edit a recommendation
+        function editRecommendation(title) {
+            const recommendations = loadRecommendations();
+            const rec = recommendations.find(note => note.title === title);
+            if (!rec) return;
+            document.getElementById('name').value = rec.name;
+            document.getElementById('title').value = rec.title;
+            document.getElementById('mediaType').value = rec.mediaType;
+            document.getElementById('description').value = rec.description;
+            editId.value = title;
+            submitBtn.value = 'Update Recommendation';
+            cancelBtn.style.display = 'inline';
+        }
+
+        // Handle cancel edit
+        cancelBtn.onclick = resetFormMode;
+
+        // Initial page load render
         renderRecommendations();
- 
     </script>
 </html>
 
