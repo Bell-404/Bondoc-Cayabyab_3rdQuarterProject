@@ -3,7 +3,7 @@
     margin-left: 20px;
     padding: 0;
     overflow: hidden;
-    display: flex;
+    display: flex; gap: 10px;
     justify-content: left;
     align-items: left;
 }
@@ -11,6 +11,7 @@
 .animationlist li {
     margin: 5px 5px;
     text-align: center;
+    
 }
 
 .animationlist button {
@@ -20,15 +21,15 @@
 }
 
 .animationlist li img {
-    width: 80px;
+    width: 160px;
     height: auto;
 }
 
 .animationlist .television {
-    height: 625px;
-    width: auto;
+    width: 880px;
     align-items: right;
     margin-left: 50px;
+    z-index: 3;
 }
 
 /* Popover Styles */
