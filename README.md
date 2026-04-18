@@ -7,7 +7,7 @@
 - Has links to access media displayed in the website
 - Each subpage in the website are formatted in a way that relates to its topic. I.e., the “Books” tab’s visual design is that of a library, the “Music” tab is displayed like a vinyl player and records, "Animations" will be displayed with records and a television.
 - Clicking the images inside the media section will cause information about the media to show up.
-- Has an cozy, interactive minigame where you polish and keep a library
+- Has a small number-guessing minigame
 - This website will NOT provide the full form or links to the full form of media. It will only provide summaries, descriptions, and previews.
 - There is a form to display recommendations you want to keep.
 ## Details :
